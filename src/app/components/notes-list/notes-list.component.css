@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 50%;
+  margin-top: 10px;
+}
