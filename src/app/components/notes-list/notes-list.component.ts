@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import INote from 'src/app/models/notes.model';
@@ -9,7 +9,8 @@ import { startWith } from 'rxjs/operators';
 @Component({
   selector: 'app-notes-list',
   templateUrl: './notes-list.component.html',
-  styleUrls: ['./notes-list.component.css']
+  styleUrls: ['./notes-list.component.css'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class NotesListComponent implements OnInit {
   list: Array<INote> = [];
@@ -18,9 +19,8 @@ export class NotesListComponent implements OnInit {
     this.dateFilter.valueChanges.pipe(
       startWith('')
     ).subscribe((date) => {
-      console.log(date, this.noteService.fetchAll(date));
       this.list = this.noteService.fetchAll(date);
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -34,5 +34,9 @@ export class NotesListComponent implements OnInit {
   }
   onExportAsJson(): void {
 
+  }
+
+  clearStartDate(): void {
+    this.dateFilter.setValue(null);
   }
 }
