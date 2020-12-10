@@ -10,7 +10,14 @@ import { NotesService } from 'src/app/services/notes/notes.service';
 })
 export class NoteFormComponent implements OnInit {
   form: FormGroup;
-  constructor(private fb: FormBuilder, private service: NotesService, private matDialogRef: MatDialogRef<NoteFormComponent>) {
+  constructor(
+    private fb: FormBuilder,
+    private service: NotesService,
+    private matDialogRef: MatDialogRef<NoteFormComponent>
+  ) {
+    this.initForm();
+  }
+  initForm(): void {
     this.form = this.fb.group({
       id: '',
       text: ['', [Validators.required]],
