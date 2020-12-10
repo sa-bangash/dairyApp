@@ -19,12 +19,14 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NoteitemComponent } from './components/noteitem/noteitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesListComponent,
-    NoteFormComponent
+    NoteFormComponent,
+    NoteitemComponent
   ],
   imports: [
     BrowserModule,

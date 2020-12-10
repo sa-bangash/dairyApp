@@ -26,12 +26,12 @@
         <div>
             <mat-list>
                 <div mat-subheader>List</div>
-                <mat-list-item *ngFor="let note of list">
+                <!-- <mat-list-item *ngFor="let note of list">
                     <mat-icon mat-list-icon>description</mat-icon>
                     <div mat-line>{{note.text}}</div>
                     <div mat-line> {{note.date | date}} </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
+                </mat-list-item> -->
+                <app-noteitem *ngFor="let note of list" [data]="note"></app-noteitem>
                 <mat-list-item *ngIf="!list.length">
                     No Item Found on this Date
                 </mat-list-item>
