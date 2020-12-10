@@ -14,13 +14,16 @@
             <mat-error *ngIf="form.get('text').hasError('required')">Text field is required</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Enter Image Url</mat-label>
-            <input matInput formControlName="imageUrl" />
-        </mat-form-field>
-        <mat-form-field>
             <mat-label>Enter Video Url</mat-label>
             <input matInput formControlName="videoUrl" />
         </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter Image Url</mat-label>
+            <input matInput formControlName="imageUrl" />
+        </mat-form-field>
+        <div class="image-preview" *ngIf="ImageUrlCtrl?.value">
+            <img [src]="ImageUrlCtrl?.value" alt="image url" />
+        </div>
     </div>
     <mat-dialog-actions align="end">
         <button mat-button mat-dialog-close>Cancel</button>

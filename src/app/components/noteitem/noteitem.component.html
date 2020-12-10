@@ -1,5 +1,6 @@
 <mat-list-item>
-    <mat-icon mat-list-icon>description</mat-icon>
+    <img mat-list-icon [src]="data?.imageUrl" *ngIf="data.imageUrl" />
+    <mat-icon mat-list-icon *ngIf="!data.imageUrl">description</mat-icon>
     <div mat-line>{{data.text}}</div>
     <div mat-line> {{data.date | date}} </div>
     <span class="cursor-pointer">

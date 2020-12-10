@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 
-.mat-form-field {
-  margin: 10px;
+.image-preview img {
+  width: 100px;
+  height: 100px;
 }
