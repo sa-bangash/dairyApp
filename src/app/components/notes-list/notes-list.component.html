@@ -32,6 +32,9 @@
                     <div mat-line> {{note.date | date}} </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
+                <mat-list-item *ngIf="!list.length">
+                    No Item Found on this Date
+                </mat-list-item>
             </mat-list>
         </div>
     </div>

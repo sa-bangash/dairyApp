@@ -29,7 +29,7 @@ export class NotesListComponent implements OnInit {
 
   onAddNote(): void {
     this.dialog.open(NoteFormComponent, {
-      width: '80%',
+      width: '50%',
     });
   }
   onExportAsJson(): void {
