@@ -1,7 +1,7 @@
 export default interface INote {
-    id: string;
+    id: number;
     text: string;
     imageUrl: string;
     videoUrl: string;
-    date: number;
+    date: Date;
 }
