@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Components
+import { NoteitemComponent } from './components/note-item/note-item.component';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
 import { NoteFormComponent } from './components/note-form/note-form.component';
 
@@ -18,15 +20,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NoteitemComponent } from './components/noteitem/noteitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesListComponent,
     NoteFormComponent,
-    NoteitemComponent
+    NoteitemComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,7 @@ import { NoteitemComponent } from './components/noteitem/noteitem.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

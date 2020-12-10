@@ -3,8 +3,6 @@
     <mat-icon mat-list-icon *ngIf="!data.imageUrl">description</mat-icon>
     <div mat-line>{{data.text}}</div>
     <div mat-line> {{data.date | date}} </div>
-    <span class="cursor-pointer">
-        <mat-icon>visibility</mat-icon>
-    </span>
+    <a *ngIf="data.videoUrl" [href]="data.videoUrl" mat-line target="blank">Video Link</a>
     <mat-divider></mat-divider>
 </mat-list-item>

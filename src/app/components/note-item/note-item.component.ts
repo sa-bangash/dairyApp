@@ -1,17 +1,17 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import INote from 'src/app/models/notes.model';
 
 @Component({
-  selector: 'app-noteitem',
-  templateUrl: './noteitem.component.html',
-  styleUrls: ['./noteitem.component.css']
+  selector: 'app-note-item',
+  templateUrl: './note-item.component.html',
+  styleUrls: ['./note-item.component.css']
 })
 export class NoteitemComponent implements OnInit {
   @Input()
   data: INote;
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
-
 }

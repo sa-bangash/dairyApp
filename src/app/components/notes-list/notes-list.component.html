@@ -21,7 +21,7 @@
         <div>
             <mat-list>
                 <div mat-subheader>List</div>
-                <app-noteitem *ngFor="let note of list" [data]="note"></app-noteitem>
+                <app-note-item *ngFor="let note of list" [data]="note"></app-note-item>
                 <mat-list-item *ngIf="!list.length">
                     No Item Found on this Date
                 </mat-list-item>
