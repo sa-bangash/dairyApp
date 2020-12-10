@@ -23,7 +23,8 @@ export class NoteFormComponent implements OnInit {
       id: '',
       text: ['', [Validators.required]],
       imageUrl: '',
-      date: new Date()
+      date: new Date(),
+      videoUrl: ''
     });
   }
 
