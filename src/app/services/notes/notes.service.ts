@@ -22,7 +22,7 @@ export class NotesService {
   }];
   constructor() { }
 
-  fetchAll(date: Date): Array<INote> {
+  fetchAll(date?: Date): Array<INote> {
     if (date) {
       return this.notesList.filter((item) => {
         return Intl.DateTimeFormat().format(item.date) === Intl.DateTimeFormat().format(date);
