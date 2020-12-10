@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { NotesService } from 'src/app/services/notes/notes.service';
 
 @Component({
   selector: 'app-note-form',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class NoteFormComponent implements OnInit {
   date = new Date();
   form: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private service: NotesService, private matDialogRef: MatDialogRef<NoteFormComponent>) {
     this.form = this.fb.group({
       id: '',
       text: '',
@@ -22,6 +24,9 @@ export class NoteFormComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(): void {
-    console.log(this.form.value)
+    if (this.form.valid) {
+      this.service.add(this.form.value);
+      this.matDialogRef.close();
+    }
   }
 }
