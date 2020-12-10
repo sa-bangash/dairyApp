@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="container">
         <div class="header-wrapper">
-            <mat-form-field>
+            <mat-form-field class="filter-date">
                 <mat-label>Filter By date</mat-label>
                 <input matInput [matDatepicker]="picker" [formControl]="dateFilter" />
                 <mat-datepicker-toggle matSuffix [for]=" picker"></mat-datepicker-toggle>
@@ -12,13 +12,8 @@
             </mat-form-field>
             <div>
                 <span class="mr-10">
-                    <button mat-fab aria-label="add button" (click)="onExportAsJson()">
+                    <button mat-mini-fab aria-label="add button" (click)="onExportAsJson()">
                         <mat-icon>get_app</mat-icon>
-                    </button>
-                </span>
-                <span>
-                    <button mat-fab aria-label="add button" (click)="onAddNote()">
-                        <mat-icon>add</mat-icon>
                     </button>
                 </span>
             </div>
@@ -34,3 +29,9 @@
         </div>
     </div>
 </div>
+
+<span class="add-btn">
+    <button mat-fab aria-label="add button" (click)="onAddNote()">
+        <mat-icon>add</mat-icon>
+    </button>
+</span>

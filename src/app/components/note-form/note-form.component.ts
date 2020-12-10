@@ -9,7 +9,6 @@ import { NotesService } from 'src/app/services/notes/notes.service';
   styleUrls: ['./note-form.component.css']
 })
 export class NoteFormComponent implements OnInit {
-  date = new Date();
   form: FormGroup;
   constructor(private fb: FormBuilder, private service: NotesService, private matDialogRef: MatDialogRef<NoteFormComponent>) {
     this.form = this.fb.group({
