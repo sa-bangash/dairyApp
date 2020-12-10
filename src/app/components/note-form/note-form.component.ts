@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { NotesService } from 'src/app/services/notes/notes.service';
 
@@ -14,7 +14,7 @@ export class NoteFormComponent implements OnInit {
   constructor(private fb: FormBuilder, private service: NotesService, private matDialogRef: MatDialogRef<NoteFormComponent>) {
     this.form = this.fb.group({
       id: '',
-      text: '',
+      text: ['', [Validators.required]],
       imageUrl: '',
       videoUrl: '',
       date: new Date()

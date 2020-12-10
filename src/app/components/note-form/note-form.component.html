@@ -11,6 +11,7 @@
             <mat-label>Enter text</mat-label>
             <textarea formControlName="text" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                 cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+            <mat-error *ngIf="form.get('text').hasError('required')">Text field is required</mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Enter Image Url</mat-label>
