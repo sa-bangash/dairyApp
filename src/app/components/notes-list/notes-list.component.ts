@@ -11,7 +11,6 @@ import { downloadObjectAsJson } from 'src/app/common/utils';
   selector: 'app-notes-list',
   templateUrl: './notes-list.component.html',
   styleUrls: ['./notes-list.component.css'],
-  // encapsulation: ViewEncapsulation.None
 })
 export class NotesListComponent implements OnInit {
   list: Array<INote> = [];
@@ -25,7 +24,6 @@ export class NotesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.onAddNote();
   }
 
   onAddNote(): void {
