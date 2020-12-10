@@ -17,7 +17,7 @@ export class NotesService {
     });
   }
 
-  add(note: INote) {
+  add(note: INote): void {
     this.notesList.push(note);
   }
 }
