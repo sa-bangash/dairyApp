@@ -32,6 +32,6 @@ export class NotesService {
   }
 
   add(note: INote): void {
-    this.notesList.push({ ...note, id: this.notesList.length });
+    this.notesList.push({ ...note, id: this.notesList.length + 1 });
   }
 }
