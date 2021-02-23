@@ -12,3 +12,6 @@ export function downloadObjectAsJson(exportObj, exportName): void {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
+
+
+
